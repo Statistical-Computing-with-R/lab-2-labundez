@@ -148,7 +148,8 @@ the $x$-axis) and `hindfoot_length` (on the $y$-axis).**
 ggplot(data = surveys,
        mapping = aes(x = weight, y = hindfoot_length, alpha = 1)) +
   geom_point() +
-  facet_grid(~ species)
+  facet_wrap(~ species) +
+  labs(x = "Weight", title = "Weight vs. Hindfoot Length", subtitle = "Hindfoot Length")
 
 ```
 
