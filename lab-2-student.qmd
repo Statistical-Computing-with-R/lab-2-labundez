@@ -233,6 +233,10 @@ Some people (and journals) prefer for boxplots to be stacked with a specific ori
 ```{r}
 #| label: rotated-boxplot
 
+ggplot(data = surveys,
+       mapping = aes(x = weight, y = species)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(color = "steelblue", alpha = 0.01) 
 ```
 
 Notice how vertically stacked boxplots make the species labels more readable
@@ -265,13 +269,14 @@ might want to look up the help documentation for `aov()`.
 ```{r}
 #| label: anova
 
-species_mod <- aov()
+species_mod <- aov(lm(weight ~ species, data = surveys))
 
 summary(species_mod)
 ```
 
 **18. Based on the results of the ANOVA F-test, draw a conclusion in context of the hypotheses. Make sure to cite appropriate output from above.**
 
+Because the p-value is significant, we reject the null hypothesis. At least one species has significantly different mean weight compared to the others.
 
 # Lab 2 Submission
 
