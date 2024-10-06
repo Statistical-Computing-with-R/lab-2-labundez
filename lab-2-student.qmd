@@ -5,6 +5,9 @@ format: html
 editor: source
 embed-resources: true
 code-tools: true
+echo: true
+warning: false
+message: false
 ---
 
 # Part 1: GitHub Workflow
