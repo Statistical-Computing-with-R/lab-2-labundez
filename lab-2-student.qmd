@@ -181,6 +181,11 @@ It takes a larger cognitive load to read text that is rotated. It is common prac
 ```{r}
 #| label: boxplot
 
+ggplot(data = surveys,
+       mapping = aes(x = species, y = weight)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(color = "steelblue", alpha = 0.01) +
+  theme(axis.text.x = element_text(angle = 45))
 
 ```
 
