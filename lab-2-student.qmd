@@ -279,7 +279,7 @@ summary(species_mod)
 
 **18. Based on the results of the ANOVA F-test, draw a conclusion in context of the hypotheses. Make sure to cite appropriate output from above.**
 
-Because the p-value is significant, we reject the null hypothesis. At least one species has significantly different mean weight compared to the others.
+Because the p-value is indicated to be less than 0, which is significant, we reject the null hypothesis. At least one species has significantly different mean weight compared to the others.
 
 # Lab 2 Submission
 
